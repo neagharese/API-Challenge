@@ -28,6 +28,8 @@ public class Target extends GraphicsProgram {
 		double x1 = getWidth()/2 - (72*0.65);
 		double y1 = getHeight()/2 - (72*0.65);
 		GOval oval = new GOval(x1,y1,144*0.65,144*0.65);
+		oval.setFilled(true);
+		oval.setColor(Color.WHITE);
 		add(oval);
 	}
 }
