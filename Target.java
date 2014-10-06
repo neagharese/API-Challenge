@@ -14,7 +14,7 @@ public class Target extends GraphicsProgram {
 	public void run() {
 		makeInnerCircle();
 		makeMiddleCircle();
-		//makeOuterCircle();
+		makeOuterCircle();
 	}
 	private void makeInnerCircle(){
 		double x1 = getWidth()/2 - 72;
@@ -30,6 +30,14 @@ public class Target extends GraphicsProgram {
 		GOval oval = new GOval(x1,y1,144*0.65,144*0.65);
 		oval.setFilled(true);
 		oval.setColor(Color.WHITE);
+		add(oval);
+	}
+	private void makeOuterCircle(){
+		double x1 = getWidth()/2 - (72*0.3);
+		double y1 = getHeight()/2 - (72*0.3);
+		GOval oval = new GOval(x1,y1,144*0.3,144*0.3);
+		oval.setFilled(true);
+		oval.setColor(Color.RED);
 		add(oval);
 	}
 }
