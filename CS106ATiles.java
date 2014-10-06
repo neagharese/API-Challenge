@@ -28,6 +28,7 @@ public class CS106ATiles extends GraphicsProgram {
 		double y1 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
 		GRect rect1 = new GRect(x1,y1,200,100);
 		add(rect1);
+		double centerRect1 = rect1.getWidth();
 		double x2 = centerX + (TILE_SPACE/2);
 		double y2 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
 		GRect rect2 = new GRect(x2,y2,200,100);
@@ -48,7 +49,7 @@ public class CS106ATiles extends GraphicsProgram {
 		double y1 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
 		GLabel label1 = new GLabel("CS106A",x1,y1);
 		label1.setFont("SansSerif-36");
-		label1.getWidth();
+		double lablel1Center = label1.getWidth()/2;
 		add(label1);
 		double x2 = centerX + (TILE_SPACE/2) + (TILE_WIDTH)/7;
 		double y2 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
@@ -65,6 +66,21 @@ public class CS106ATiles extends GraphicsProgram {
 		GLabel label4 = new GLabel("CS106A",x4,y4);
 		label4.setFont("SansSerif-36");
 		add(label4);
+	}
+	private void makeFirstTile(){
+		double centerY = getHeight()/2;
+		double centerX = getWidth()/2;
+		double x1 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
+		double y1 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
+		GRect rect1 = new GRect(x1,y1,200,100);
+		add(rect1);
+		//double centerRect1 = rect1.getWidth();
+		double x2 = centerX - (TILE_SPACE/2) - (TILE_WIDTH*6)/7;
+		double y2 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
+		GLabel label1 = new GLabel("CS106A",x2,y2);
+		label1.setFont("SansSerif-36");
+		double lablel1Center = label1.getWidth()/2;
+		add(label1);
 	}
 }
 
