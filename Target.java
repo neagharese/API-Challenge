@@ -21,5 +21,6 @@ public class Target extends GraphicsProgram {
 		double y1 = getHeight()/2 - 72;
 		GOval oval = new GOval(x1,y1,144,144);
 		oval.setFillColor(Color.RED);
+		add(oval);
 	}
 }
