@@ -28,6 +28,8 @@ public class CS106ATiles extends GraphicsProgram {
 		double y1 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
 		GRect rect1 = new GRect(x1,y1,200,100);
 		add(rect1);
+		GLabel label = new GLabel("CS106A",x1,y1);
+		add(label);
 		double x2 = centerX + (TILE_SPACE/2);
 		double y2 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
 		GRect rect2 = new GRect(x2,y2,200,100);
