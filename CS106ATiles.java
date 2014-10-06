@@ -25,6 +25,7 @@ public class CS106ATiles extends GraphicsProgram {
 		double x1 = centerX - (TILE_SPACE/2);
 		double y1 = centerY - (TILE_SPACE/2);
 		GRect rect = new GRect(x1,y1,100,50);
+		add(rect);
 	}
 }
 
