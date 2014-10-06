@@ -13,7 +13,7 @@ import java.awt.*;
 public class Target extends GraphicsProgram {	
 	public void run() {
 		makeInnerCircle();
-		//makeMiddleCircle();
+		makeMiddleCircle();
 		//makeOuterCircle();
 	}
 	private void makeInnerCircle(){
@@ -22,6 +22,12 @@ public class Target extends GraphicsProgram {
 		GOval oval = new GOval(x1,y1,144,144);
 		oval.setFilled(true);
 		oval.setColor(Color.RED);
+		add(oval);
+	}
+	private void makeMiddleCircle(){
+		double x1 = getWidth()/2 - (72*0.65);
+		double y1 = getHeight()/2 - (72*0.65);
+		GOval oval = new GOval(x1,y1,144*0.65,144*0.65);
 		add(oval);
 	}
 }
