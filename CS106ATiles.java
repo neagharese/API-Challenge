@@ -67,7 +67,7 @@ public class CS106ATiles extends GraphicsProgram {
 		label4.setFont("SansSerif-36");
 		add(label4);
 	}
-	private void makeFirstTile(){
+	/*private void makeFirstTile(){
 		double centerY = getHeight()/2;
 		double centerX = getWidth()/2;
 		double x1 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
@@ -81,6 +81,6 @@ public class CS106ATiles extends GraphicsProgram {
 		label1.setFont("SansSerif-36");
 		double lablel1Center = label1.getWidth()/2;
 		add(label1);
-	}
+	}*/
 }
 
