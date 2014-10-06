@@ -44,7 +44,7 @@ public class CS106ATiles extends GraphicsProgram {
 	private void fillTiles(){
 		double centerY = getHeight()/2;
 		double centerX = getWidth()/2;
-		double x1 = centerX - (TILE_SPACE/2) - (TILE_WIDTH*8)/9;
+		double x1 = centerX - (TILE_SPACE/2) - (TILE_WIDTH*6)/7;
 		double y1 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
 		GLabel label = new GLabel("CS106A",x1,y1);
 		label.setFont("SansSerif-36");
