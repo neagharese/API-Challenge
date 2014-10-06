@@ -59,6 +59,11 @@ public class CS106ATiles extends GraphicsProgram {
 		GLabel label3 = new GLabel("CS106A",x3,y3);
 		label3.setFont("SansSerif-36");
 		add(label3);
+		double x4 = centerX - (TILE_SPACE/2) - (TILE_WIDTH*6)/7;
+		double y4 = centerY + (TILE_SPACE/2) + (TILE_HEIGHT*3)/5;
+		GLabel label4 = new GLabel("CS106A",x4,y4);
+		label4.setFont("SansSerif-36");
+		add(label4);
 	}
 }
 
