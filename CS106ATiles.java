@@ -19,7 +19,7 @@ public class CS106ATiles extends GraphicsProgram {
 
 	public void run() {
 		makeTiles();
-		//fillTiles();
+		fillTiles();
 	}
 	private void makeTiles(){
 		double centerY = getHeight()/2;
@@ -28,8 +28,6 @@ public class CS106ATiles extends GraphicsProgram {
 		double y1 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
 		GRect rect1 = new GRect(x1,y1,200,100);
 		add(rect1);
-		GLabel label = new GLabel("CS106A",x1,y1);
-		add(label);
 		double x2 = centerX + (TILE_SPACE/2);
 		double y2 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
 		GRect rect2 = new GRect(x2,y2,200,100);
@@ -42,6 +40,15 @@ public class CS106ATiles extends GraphicsProgram {
 		double y4 = centerY + (TILE_SPACE/2);
 		GRect rect4 = new GRect(x4,y4,200,100);
 		add(rect4);
+	}
+	private void fillTiles(){
+		double centerY = getHeight()/2;
+		double centerX = getWidth()/2;
+		double x1 = centerX - (TILE_SPACE/2) - (TILE_WIDTH/2);
+		double y1 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT/2);
+		GLabel label = new GLabel("CS106A",x1,y1);
+		label.setFont("SansSerif-36");
+		add(label);
 	}
 }
 
