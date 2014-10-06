@@ -16,7 +16,15 @@ public class CS106ATiles extends GraphicsProgram {
 	private static final int TILE_SPACE = 20;
 
 	public void run() {
-		/* You fill this in. */
+		makeTiles();
+		//fillTiles();
+	}
+	double centerY = getHeight()/2;
+	double centerX = getWidth()/2;
+	private void makeTiles(){
+		double x1 = centerX - (TILE_SPACE/2);
+		double y1 = centerY - (TILE_SPACE/2);
+		GRect rect = new GRect(x1,y1,100,50);
 	}
 }
 
