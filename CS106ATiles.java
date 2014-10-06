@@ -26,8 +26,20 @@ public class CS106ATiles extends GraphicsProgram {
 		double centerX = getWidth()/2;
 		double x1 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
 		double y1 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
-		GRect rect = new GRect(x1,y1,200,100);
-		add(rect);
+		GRect rect1 = new GRect(x1,y1,200,100);
+		add(rect1);
+		double x2 = centerX - (TILE_SPACE/2) + TILE_WIDTH;
+		double y2 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
+		GRect rect2 = new GRect(x2,y2,200,100);
+		add(rect2);
+		double x3 = centerX - (TILE_SPACE/2) + TILE_WIDTH;
+		double y3 = centerY - (TILE_SPACE/2) + TILE_HEIGHT;
+		GRect rect3 = new GRect(x3,y3,200,100);
+		add(rect3);
+		double x4 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
+		double y4 = centerY - (TILE_SPACE/2) + TILE_HEIGHT;
+		GRect rect4 = new GRect(x4,y4,200,100);
+		add(rect4);
 	}
 }
 
