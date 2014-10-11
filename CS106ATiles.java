@@ -14,8 +14,8 @@ public class CS106ATiles extends GraphicsProgram {
 	
 	/** Amount of space (in pixels) between tiles */
 	private static final int TILE_SPACE = 20;
-	private static final int TILE_WIDTH = 200;
-	private static final int TILE_HEIGHT = 100;
+	private static final int TILE_WIDTH = 300;
+	private static final int TILE_HEIGHT = 150;
 
 	public void run() {
 		makeTiles();
