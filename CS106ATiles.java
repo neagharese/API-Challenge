@@ -82,7 +82,7 @@ public class CS106ATiles extends GraphicsProgram {
 		return x;
 	}
 	private double findY(GLabel label){
-		double y = label.getWidth()/2;
+		double y = label.getHeight()/2;
 		return y;
 	}
 	private void fillFirstTile(){
