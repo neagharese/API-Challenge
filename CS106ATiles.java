@@ -22,18 +22,10 @@ public class CS106ATiles extends GraphicsProgram {
 		fillTiles();
 	}
 	private void makeTiles(){
-		for(int i=0; i<4;i++){
-			if(i==0){
-				makeRect1();
-			}
-			if(i==1){
-				makeRect2();
-			}
-			if(i==2){
-				makeRect3();
-			} else{
-				makeRect4();
-			}
+		makeRect1();
+		makeRect2();
+		makeRect3();
+		makeRect4();
 		}
 		/*double centerY = getHeight()/2;
 		double centerX = getWidth()/2;
