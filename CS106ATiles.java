@@ -22,7 +22,22 @@ public class CS106ATiles extends GraphicsProgram {
 		fillTiles();
 	}
 	private void makeTiles(){
-		double centerY = getHeight()/2;
+		for(int i=0; i<4;i++){
+			double centerY = getHeight()/2;
+			double centerX = getWidth()/2;
+			if(i==0){
+				makeRect1();
+			}
+			if(i==1){
+				makeRect2();
+			}
+			if(i==2){
+				makeRect3();
+			} else{
+				makeRect4();
+			}
+		}
+		/*double centerY = getHeight()/2;
 		double centerX = getWidth()/2;
 		double x1 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
 		double y1 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
@@ -40,6 +55,30 @@ public class CS106ATiles extends GraphicsProgram {
 		double x4 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
 		double y4 = centerY + (TILE_SPACE/2);
 		GRect rect4 = new GRect(x4,y4,200,100);
+		add(rect4);*/
+	}
+	private void makeRect1(){
+		double x1 = (getWidth()/2) - (TILE_SPACE/2) - TILE_WIDTH;
+		double y1 = (getHeight()/2) - (TILE_SPACE/2) - TILE_HEIGHT;
+		GRect rect1 = new GRect(x1,y1,200,100);
+		add(rect1);
+	}
+	private void makeRect2(){
+		double x1 = (getWidth()/2) - (TILE_SPACE/2);
+		double y1 = (getHeight()/2) - (TILE_SPACE/2) - TILE_HEIGHT;
+		GRect rect2 = new GRect(x1,y1,200,100);
+		add(rect2);
+	}
+	private void makeRect3(){
+		double x1 = (getWidth()/2) - (TILE_SPACE/2);
+		double y1 = (getHeight()/2) - (TILE_SPACE/2);
+		GRect rect3 = new GRect(x1,y1,200,100);
+		add(rect3);
+	}
+	private void makeRect4(){
+		double x1 = (getWidth()/2) - (TILE_SPACE/2) - TILE_WIDTH;
+		double y1 = (getHeight()/2) - (TILE_SPACE/2);
+		GRect rect4 = new GRect(x1,y1,200,100);
 		add(rect4);
 	}
 	private void fillTiles(){
