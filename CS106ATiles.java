@@ -52,15 +52,18 @@ public class CS106ATiles extends GraphicsProgram {
 		add(rect4);
 	}
 	private void fillTiles(){
-		double centerY = getHeight()/2;
-		double centerX = getWidth()/2;
+		//double centerY = getHeight()/2;
+		//double centerX = getWidth()/2;
 		fillFirstTile();
+		fillSecondTile();
+		fillThirdTile();
+		fillFourthTile();
 		/*double x1 = centerX - (TILE_SPACE/2) - (TILE_WIDTH*6)/7;
 		double y1 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
 		GLabel label1 = new GLabel("CS106A",x1,y1);
 		label1.setFont("SansSerif-36");
 		double lablel1Center = label1.getWidth()/2;
-		add(label1);*/
+		add(label1);
 		double x2 = centerX + (TILE_SPACE/2) + (TILE_WIDTH)/7;
 		double y2 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
 		GLabel label2 = new GLabel("CS106A",x2,y2);
@@ -75,7 +78,7 @@ public class CS106ATiles extends GraphicsProgram {
 		double y4 = centerY + (TILE_SPACE/2) + (TILE_HEIGHT*3)/5;
 		GLabel label4 = new GLabel("CS106A",x4,y4);
 		label4.setFont("SansSerif-36");
-		add(label4);
+		add(label4);*/
 	}
 	private double findX(GLabel label){
 		double x = label.getWidth()/2;
@@ -90,6 +93,30 @@ public class CS106ATiles extends GraphicsProgram {
 		label1.setFont("SansSerif-36");
 		double x1 = (getWidth() - (TILE_SPACE) - (TILE_WIDTH))/2 - findX(label1);
 		double y1 = (getHeight() - (TILE_SPACE) - (TILE_HEIGHT))/2 + findY(label1);
+		label1.setLocation(x1,y1);
+		add(label1);
+	}
+	private void fillSecondTile(){
+		GLabel label1 = new GLabel("CS106A");
+		label1.setFont("SansSerif-36");
+		double x1 = (getWidth() + (TILE_SPACE) + (TILE_WIDTH))/2 - findX(label1);
+		double y1 = (getHeight() - (TILE_SPACE) - (TILE_HEIGHT))/2 + findY(label1);
+		label1.setLocation(x1,y1);
+		add(label1);
+	}
+	private void fillThirdTile(){
+		GLabel label1 = new GLabel("CS106A");
+		label1.setFont("SansSerif-36");
+		double x1 = (getWidth() + (TILE_SPACE) + (TILE_WIDTH))/2 - findX(label1);
+		double y1 = (getHeight() + (TILE_SPACE) + (TILE_HEIGHT))/2 + findY(label1);
+		label1.setLocation(x1,y1);
+		add(label1);
+	}
+	private void fillFourthTile(){
+		GLabel label1 = new GLabel("CS106A");
+		label1.setFont("SansSerif-36");
+		double x1 = (getWidth() - (TILE_SPACE) - (TILE_WIDTH))/2 - findX(label1);
+		double y1 = (getHeight() + (TILE_SPACE) + (TILE_HEIGHT))/2 + findY(label1);
 		label1.setLocation(x1,y1);
 		add(label1);
 	}
