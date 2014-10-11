@@ -26,7 +26,7 @@ public class CS106ATiles extends GraphicsProgram {
 		makeRect2();
 		makeRect3();
 		makeRect4();
-		/*double centerY = getHeight()/2;
+		double centerY = getHeight()/2;
 		double centerX = getWidth()/2;
 		double x1 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
 		double y1 = centerY - (TILE_SPACE/2) - TILE_HEIGHT;
@@ -44,7 +44,7 @@ public class CS106ATiles extends GraphicsProgram {
 		double x4 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
 		double y4 = centerY + (TILE_SPACE/2);
 		GRect rect4 = new GRect(x4,y4,200,100);
-		add(rect4);*/
+		add(rect4);
 	}
 	private void makeRect1(){
 		double centerY = getHeight()/2;
