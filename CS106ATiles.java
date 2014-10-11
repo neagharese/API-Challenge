@@ -26,7 +26,6 @@ public class CS106ATiles extends GraphicsProgram {
 		makeRect2();
 		makeRect3();
 		makeRect4();
-		}
 		/*double centerY = getHeight()/2;
 		double centerX = getWidth()/2;
 		double x1 = centerX - (TILE_SPACE/2) - TILE_WIDTH;
