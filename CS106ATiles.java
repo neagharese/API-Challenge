@@ -88,8 +88,8 @@ public class CS106ATiles extends GraphicsProgram {
 	private void fillFirstTile(){
 		GLabel label1 = new GLabel("CS106A");
 		label1.setFont("SansSerif-36");
-		double x1 = getWidth()/2 - (TILE_SPACE/2) - findX(label1);
-		double y1 = getHeight()/2 - (TILE_SPACE/2) - findY(label1);
+		double x1 = getWidth()/2 - (TILE_SPACE/2) - (TILE_WIDTH) - findX(label1);
+		double y1 = getHeight()/2 - (TILE_SPACE/2) - (TILE_HEIGHT) - findY(label1);
 		label1.setLocation(x1,y1);
 		add(label1);
 	}
