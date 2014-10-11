@@ -61,7 +61,7 @@ public class CS106ATiles extends GraphicsProgram {
 	private void makeRect2(){
 		double x2 = (getWidth()/2) - (TILE_SPACE/2);
 		double y2 = (getHeight()/2) - (TILE_SPACE/2) - TILE_HEIGHT;
-		GRect rect2 = new GRect(x1,y1,200,100);
+		GRect rect2 = new GRect(x2,y2,200,100);
 		add(rect2);
 	}
 	private void makeRect3(){
