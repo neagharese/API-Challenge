@@ -22,7 +22,7 @@ public class FindRange extends ConsoleProgram {
 				if(x < smallest){
 					smallest = x;
 				}
-				if(x>largest){
+				if(x > largest){
 					largest = x;
 				}
 			}
