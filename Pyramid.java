@@ -26,12 +26,12 @@ public class Pyramid extends GraphicsProgram {
 	private static final int BRICKS_IN_BASE = 14;
 	
 	public void run() {
-		int x = BRICK_HEIGHT * numberOfRows();
+		//int x = BRICK_HEIGHT * numberOfRows();
 		int numberOfBricks = BRICKS_IN_BASE; 
-		for(int i = 1; i < x; i++ ){
-			double y1 = x*BRICK_HEIGHT;
-			numberOfBricks = numberOfBricks-2;
+		for(int i = 1; i <= numberOfRows(); i++ ){
+			double y1 = i*BRICK_HEIGHT;
 			layBricks(numberOfBricks,y1);
+			numberOfBricks = numberOfBricks-2;
 		}
 	}
 	private int numberOfRows(){
@@ -44,7 +44,12 @@ public class Pyramid extends GraphicsProgram {
 		return x;
 	}
 	private void layBricks(int numberOfBricks,double y1){
-		GRect rect = new GRect(findX(numberOfBricks),y1,BRICK_WIDTH,BRICK_HEIGHT);
+		double x1 = findX(numberOfBricks);
+		for(int i=0; i<numberOfBricks; i++){
+			GRect rect = new GRect(x1,y1,BRICK_WIDTH,BRICK_HEIGHT);
+			add(rect);
+			x1 = x1 + BRICK_WIDTH;
+		}
 	}
 	private double findX(int numberOfBricks){
 		double X = getWidth()/2 - (numberOfBricks*BRICK_WIDTH)/2;
