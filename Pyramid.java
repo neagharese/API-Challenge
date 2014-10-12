@@ -47,6 +47,7 @@ public class Pyramid extends GraphicsProgram {
 		double x1 = findX(numberOfBricks);
 		for(int i=0; i<numberOfBricks; i++){
 			GRect rect = new GRect(x1,y1,BRICK_WIDTH,BRICK_HEIGHT);
+			GRect.setColor(Color next Color());
 			add(rect);
 			x1 = x1 + BRICK_WIDTH;
 		}
