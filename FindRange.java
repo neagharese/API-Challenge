@@ -12,14 +12,14 @@ public class FindRange extends ConsoleProgram {
 	private static final double SENTINEL = 0;
 	public void run() {
 		println("This program finds the largest and the smallest numbers.");
-		double x = readDouble("?: ");
-		double smallest = x;
-		double largest = x;
-		if( x == SENTINEL){
+		if( readDouble("?: ") == SENTINEL){
 			println("no values have been entered");
 		} else {
+			double x = readDouble("?: ");
+			double smallest = x;
+			double largest = x;
 			while(readDouble("?: ") != SENTINEL){
-				if(x < smallest || x<0 && x<smallest){
+				if(x < smallest){
 					smallest = x;
 				}
 				if(x>largest){
