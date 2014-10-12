@@ -25,6 +25,7 @@ public class FindRange extends ConsoleProgram {
 				if(x > largest){
 					largest = x;
 				}
+				x=x;
 			}
 			println("smallest: "+smallest+"");
 			println("largest:"+largest+"");
