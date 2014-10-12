@@ -19,14 +19,14 @@ public class FindRange extends ConsoleProgram {
 			double smallest = x;
 			double largest = x;
 			while(x != SENTINEL){
-				double x = readDouble("?: ");
 				if(x < smallest){
 					smallest = x;
 				}
 				if(x > largest){
 					largest = x;
 				}
-				x=x;
+				double x1 = readDouble("?: ");
+				x=x1;
 			}
 			println("smallest: "+smallest+"");
 			println("largest:"+largest+"");
