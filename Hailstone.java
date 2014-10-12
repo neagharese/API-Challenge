@@ -20,7 +20,7 @@ public class Hailstone extends ConsoleProgram {
 				n = n2;
 			} else {
 				int n2 = 3*n +1;
-				println(""+n+"is odd, so I tak 3n + 1: "+n2+"");
+				println(""+n+"is odd, so I take 3n + 1: "+n2+"");
 				n = n2;
 			}
 			x = x+1;
