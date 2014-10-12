@@ -29,7 +29,7 @@ public class Pyramid extends GraphicsProgram {
 		//int x = BRICK_HEIGHT * numberOfRows();
 		int numberOfBricks = BRICKS_IN_BASE; 
 		for(int i = 1; i <= numberOfRows(); i++ ){
-			double y1 = i*BRICK_HEIGHT;
+			double y1 = getHeight() - i*BRICK_HEIGHT;
 			layBricks(numberOfBricks,y1);
 			numberOfBricks = numberOfBricks-1;
 		}
