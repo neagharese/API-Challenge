@@ -18,11 +18,11 @@ public class Hailstone extends ConsoleProgram {
 				int n2 = n/2;
 				println(""+n+"is even so I take half: "+n2+"");
 				n = n2;
-			} else {
+			} /*else {
 				int n2 = 3*n +1;
 				println(""+n+"is odd, so I tak 3n + 1: "+n2+"");
 				n = n2;
-			}
+			}*/
 			x = x+1;
 		}
 		println("The process took "+x+" to reach 1");
