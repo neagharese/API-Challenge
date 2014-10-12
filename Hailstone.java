@@ -11,8 +11,9 @@ import acm.program.*;
 public class Hailstone extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter a number: ");
+		int x =1;
 		while(n != 1){
-			int x = 1;
+			//int x = 1;
 			if(n%2 == 2){
 				int n2 = n/2;
 				println(""+n+"is even so I take half: "+n2+"");
@@ -24,7 +25,7 @@ public class Hailstone extends ConsoleProgram {
 			}
 			x = x+1;
 		}
-		//println("The process took"+x+"to reach 1");
+		println("The process took"+x+"to reach 1");
 	}
 }
 
