@@ -17,13 +17,13 @@ import java.awt.*;
 public class Pyramid extends GraphicsProgram {
 
 /** Width of each brick in pixels */
-	private static final int BRICK_WIDTH = 60;
+	private static final int BRICK_WIDTH = 110;
 
 /** Height of each brick in pixels */
-	private static final int BRICK_HEIGHT = 22;
+	private static final int BRICK_HEIGHT = 50;
 
 /** Number of bricks in the base of the pyramid */
-	private static final int BRICKS_IN_BASE = 10;
+	private static final int BRICKS_IN_BASE = 6;
 	
 	public void run() {
 		//int x = BRICK_HEIGHT * numberOfRows();
