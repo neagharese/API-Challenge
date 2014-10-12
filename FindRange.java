@@ -27,8 +27,8 @@ public class FindRange extends ConsoleProgram {
 				}
 			}
 		}
-		println(""+smallest+"");
-		println(""+smallest+"");
+		println("smallest: "+smallest+"");
+		println("largest:"+largest+"");
 	}
 }
 
