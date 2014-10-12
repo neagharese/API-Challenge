@@ -11,7 +11,7 @@ import acm.program.*;
 public class Hailstone extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter a number: ");
-		int x =1;
+		int x =0;
 		while(n != 1){
 			//int x = 1;
 			if(n%2 == 0){
