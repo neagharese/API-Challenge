@@ -31,14 +31,14 @@ public class Pyramid extends GraphicsProgram {
 		for(int i = 1; i <= numberOfRows(); i++ ){
 			double y1 = i*BRICK_HEIGHT;
 			layBricks(numberOfBricks,y1);
-			numberOfBricks = numberOfBricks-2;
+			numberOfBricks = numberOfBricks-1;
 		}
 	}
 	private int numberOfRows(){
 		int x = 1;
 		int n = BRICKS_IN_BASE; 
 		while (n>1){
-			n = n-2;
+			n = n-1;
 			x = x+1;
 		}
 		return x;
