@@ -14,7 +14,7 @@ public class Hailstone extends ConsoleProgram {
 		int x =1;
 		while(n != 1){
 			//int x = 1;
-			if(n%2 == 2){
+			if(n%2 == 0){
 				int n2 = n/2;
 				println(""+n+"is even so I take half: "+n2+"");
 				n = n2;
