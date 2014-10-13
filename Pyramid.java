@@ -26,7 +26,6 @@ public class Pyramid extends GraphicsProgram {
 	private static final int BRICKS_IN_BASE = 14;
 	
 	public void run() {
-		//int x = BRICK_HEIGHT * numberOfRows();
 		int numberOfBricks = BRICKS_IN_BASE; 
 		for(int i = 1; i <= numberOfRows(); i++ ){
 			double y1 = getHeight() - i*BRICK_HEIGHT;
@@ -34,6 +33,10 @@ public class Pyramid extends GraphicsProgram {
 			numberOfBricks = numberOfBricks-1;
 		}
 	}
+	/* This method determines the number of rows in the pyramid
+	 * Precondition: the number of bricks in the base of the pyramid is known.
+	 * Postcondition: the number of rows in the pyramid is known.
+	 */
 	private int numberOfRows(){
 		int x = 1;
 		int n = BRICKS_IN_BASE; 
@@ -43,6 +46,11 @@ public class Pyramid extends GraphicsProgram {
 		}
 		return x;
 	}
+	/* This method lays the number of bricks in a row.
+	 * Precondition: The number of bricks in the row is known.
+	 * Postcondition: the row is filled with the proper amount of bricks.
+	 * 
+	 */
 	private void layBricks(int numberOfBricks,double y1){
 		double x1 = findX(numberOfBricks);
 		for(int i=0; i<numberOfBricks; i++){
@@ -51,13 +59,13 @@ public class Pyramid extends GraphicsProgram {
 			x1 = x1 + BRICK_WIDTH;
 		}
 	}
+	/* This method determines the x-positions of each brick.
+	 * Postcondition: the number of bricks in the row is known.
+	 * The x-position of the next brick to be laid is known.
+	 */
 	private double findX(int numberOfBricks){
 		double X = getWidth()/2 - (numberOfBricks*BRICK_WIDTH)/2;
 		return X;
-	}
-	private double findY(int rowNumber){
-		double Y = getHeight() - rowNumber*BRICK_HEIGHT;
-		return Y;
 	}
 }
 
