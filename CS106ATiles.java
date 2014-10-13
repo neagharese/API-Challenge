@@ -89,9 +89,8 @@ public class CS106ATiles extends GraphicsProgram {
 		return y;
 	}
 	private void fillFirstTile(){
-		writeText();
-		//GLabel label1 = new GLabel("CS106A");
-		//label1.setFont("SansSerif-36");
+		GLabel label1 = new GLabel("CS106A");
+		label1.setFont("SansSerif-36");
 		double x1 = (getWidth() - (TILE_SPACE) - (TILE_WIDTH))/2 - findX(label1);
 		double y1 = (getHeight() - (TILE_SPACE) - (TILE_HEIGHT))/2 + findY(label1);
 		label1.setLocation(x1,y1);
@@ -121,10 +120,9 @@ public class CS106ATiles extends GraphicsProgram {
 		label1.setLocation(x1,y1);
 		add(label1);
 	}
-	private GLabel writeText(){
+	private void writeText(){
 		GLabel label1 = new GLabel("CS106A");
 		label1.setFont("SansSerif-36");
-		return label1;
 	}
 }
 
