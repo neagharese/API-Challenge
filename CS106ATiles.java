@@ -121,9 +121,10 @@ public class CS106ATiles extends GraphicsProgram {
 		label1.setLocation(x1,y1);
 		add(label1);
 	}
-	private void writeText(){
+	private GLabel writeText(){
 		GLabel label1 = new GLabel("CS106A");
 		label1.setFont("SansSerif-36");
+		return label1;
 	}
 }
 
