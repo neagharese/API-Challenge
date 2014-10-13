@@ -21,12 +21,24 @@ public class CS106ATiles extends GraphicsProgram {
 		makeTiles();
 		fillTiles();
 	}
+	/* This method creates four rectangles evenly spaced around the center of
+	 * the window.
+	 * Precondition: none
+	 * Postcondition: there are four rectangles evenly spaced around the center of
+	 * the window.
+	 */
 	private void makeTiles(){
 		makeRect1();
 		makeRect2();
 		makeRect3();
 		makeRect4();
 	}
+	/* This method makes the first rectangle to the upper left of the center of
+	 * the window.
+	 * Precondition:none
+	 * Postcondition: there is one rectangle to the upper left of the center of
+	 * the window.
+	 */
 	private void makeRect1(){
 		double x1 = (getWidth()/2) - (TILE_SPACE/2) - TILE_WIDTH;
 		double y1 = (getHeight()/2) - (TILE_SPACE/2) - TILE_HEIGHT;
@@ -52,33 +64,10 @@ public class CS106ATiles extends GraphicsProgram {
 		add(rect4);
 	}
 	private void fillTiles(){
-		//double centerY = getHeight()/2;
-		//double centerX = getWidth()/2;
 		fillFirstTile();
 		fillSecondTile();
 		fillThirdTile();
 		fillFourthTile();
-		/*double x1 = centerX - (TILE_SPACE/2) - (TILE_WIDTH*6)/7;
-		double y1 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
-		GLabel label1 = new GLabel("CS106A",x1,y1);
-		label1.setFont("SansSerif-36");
-		double lablel1Center = label1.getWidth()/2;
-		add(label1);
-		double x2 = centerX + (TILE_SPACE/2) + (TILE_WIDTH)/7;
-		double y2 = centerY - (TILE_SPACE/2) - (TILE_HEIGHT*2)/5;
-		GLabel label2 = new GLabel("CS106A",x2,y2);
-		label2.setFont("SansSerif-36");
-		add(label2);
-		double x3 = centerX + (TILE_SPACE/2) + (TILE_WIDTH)/7;
-		double y3 = centerY + (TILE_SPACE/2) + (TILE_HEIGHT*3)/5;
-		GLabel label3 = new GLabel("CS106A",x3,y3);
-		label3.setFont("SansSerif-36");
-		add(label3);
-		double x4 = centerX - (TILE_SPACE/2) - (TILE_WIDTH*6)/7;
-		double y4 = centerY + (TILE_SPACE/2) + (TILE_HEIGHT*3)/5;
-		GLabel label4 = new GLabel("CS106A",x4,y4);
-		label4.setFont("SansSerif-36");
-		add(label4);*/
 	}
 	private double findX(GLabel label){
 		double x = label.getWidth()/2;
