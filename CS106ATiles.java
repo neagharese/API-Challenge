@@ -45,6 +45,13 @@ public class CS106ATiles extends GraphicsProgram {
 		GRect rect1 = new GRect(x1,y1,TILE_WIDTH,TILE_HEIGHT);
 		add(rect1);
 	}
+	/* This method makes the second rectangle to the upper right of the center
+	 * of the window.
+	 * Precondition: there is one rectangle to the upper left of the center of
+	 * the window.
+	 * Postcondition: there is one rectangle both to the upper left and right
+	 * of the center of the window.
+	 */
 	private void makeRect2(){
 		double x2 = (getWidth()/2) + (TILE_SPACE/2);
 		double y2 = (getHeight()/2) - (TILE_SPACE/2) - TILE_HEIGHT;
