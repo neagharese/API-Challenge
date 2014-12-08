@@ -8,14 +8,75 @@
 
 import acm.graphics.*;
 import acm.program.*;
+import acm.util.RandomGenerator;
+
+
 import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import acm.program.*;
+import acm.graphics.*;
+import acm.util.*;
 
 public class Target extends GraphicsProgram {	
-	public void run() {
-		makeInnerCircle();
-		makeMiddleCircle();
-		makeOuterCircle();
+	
+	private static final int MIN_RADIUS = 3;
+	private static final int MAX_RADIUS = 20;
+	private static final int DEFAULT_RADIUS = 7;
+	private static final double PAUSE_TIME = 1.0;
+	
+	public void init(){
+		JLabel droplet = new JLabel("Droplet radius: ");
+		add(droplet, SOUTH);
+		radius = new JSlider(MIN_RADIUS, MAX_RADIUS, DEFAULT_RADIUS);
+		add(radius, SOUTH);
+		JButton whiteCanvas = new JButton("Fill White");
+		add(whiteCanvas, SOUTH);
+		JButton blackCanvas = new JButton("Fill Black");
+		add(blackCanvas, SOUTH);
+		addActionListeners();
 	}
+
+	RandomGenerator rgen = RandomGenerator.getInstance();
+
+	
+	public void actionPerformed(ActionEvent e){
+		if(e.getActionCommand().equals("Fill White")){
+			removeAll();
+		}
+		if(e.getActionCommand().equals("Fill Black")){
+			removeAll();
+			GRect canvas = new GRect(getWidth(), getHeight());
+			canvas.setFilled(true);
+			canvas.setColor(Color.BLACK);
+			add(canvas, 0, 0);
+		}
+	}
+	
+	
+	public void run() {
+		/*makeInnerCircle();
+		makeMiddleCircle();
+		makeOuterCircle();*/
+		while(true){
+			Color color = rgen.nextColor();
+			int size = 2*radius.getValue();
+			double x = rgen.nextInt(0, getWidth());
+			double y = rgen.nextInt(0, getHeight());
+			GOval circle = new GOval(size, size);
+			circle.setFilled(true);
+			circle.setColor(color);
+			circle.setLocation(x - (size/2), y - (size/2));
+			add(circle);
+			pause(PAUSE_TIME);
+		}
+
+	}
+	
+	private JSlider radius;
+	
 	/* Creates the biggest, innermost circle and colors it red.
 	 * Precondition: The window is empty
 	 * Postcondition: There is a red circle in the middle of the
